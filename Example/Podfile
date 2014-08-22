@@ -1,7 +1,0 @@
-
-target 'VeesoMarlinManager', :exclusive => true do
-  pod "VeesoMarlinManager", :path => "../"
-
-  pod 'Specta', '~> 0.2.1'
-  pod 'Expecta'
-end
