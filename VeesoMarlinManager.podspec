@@ -10,27 +10,20 @@
 Pod::Spec.new do |s|
   s.name             = "VeesoMarlinManager"
   s.version          = "0.1.0"
-  s.summary          = "A short description of VeesoMarlinManager."
-  s.description      = <<-DESC
-                       An optional longer description of VeesoMarlinManager
+  s.summary          = "Marlin DRM support for the Veeso Media Player"
+  s.homepage         = "http://veeso.co"
+  s.license          = 'Commercial'
+  s.author           = { "Veeso" => "gabi@veeso.co" }
+  s.source           = { :git => "https://github.com/veeso/ios-marlin-drm.git", :tag => s.version.to_s }
 
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
-                       DESC
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/VeesoMarlinManager"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
-  s.license          = 'MIT'
-  s.author           = { "Gabi Dobocan" => "gabi@vitalitymedia.ro" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/VeesoMarlinManager.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
-  s.platform     = :ios, '7.0'
+  s.platform     = :ios, '5.0'
   s.requires_arc = true
 
-  s.source_files = 'Pod/Classes'
-  s.resources = 'Pod/Assets/*.png'
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.source_files         = "Headers/*.h"
+  s.public_header_files  = "Headers/*.h"
+  s.preserve_paths       = "libVeesoMarlinManager.a"
+  s.library              = "VeesoMarlinManager", "c++"
+  s.xcconfig             =  { "LIBRARY_SEARCH_PATHS" => '"$(PODS_ROOT)/VeesoMarlinManager"' }
+  
+  s.dependency "VeesoPlayer"
 end

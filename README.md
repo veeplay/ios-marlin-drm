@@ -1,28 +1,17 @@
-# VeesoMarlinManager
+## VeesoMarlinManager
 
-[![CI Status](http://img.shields.io/travis/Gabi Dobocan/VeesoMarlinManager.svg?style=flat)](https://travis-ci.org/Gabi Dobocan/VeesoMarlinManager)
-[![Version](https://img.shields.io/cocoapods/v/VeesoMarlinManager.svg?style=flat)](http://cocoadocs.org/docsets/VeesoMarlinManager)
-[![License](https://img.shields.io/cocoapods/l/VeesoMarlinManager.svg?style=flat)](http://cocoadocs.org/docsets/VeesoMarlinManager)
-[![Platform](https://img.shields.io/cocoapods/p/VeesoMarlinManager.svg?style=flat)](http://cocoadocs.org/docsets/VeesoMarlinManager)
+APSMediaPlayer provides support for [Marlin DRM](http://www.marlin-community.com/), using the SDKs provided by [ExpressPlay](http://expressplay.com). To install:
 
-## Usage
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-
-## Installation
-
-VeesoMarlinManager is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-    pod "VeesoMarlinManager"
-
-## Author
-
-Gabi Dobocan, gabi@vitalitymedia.ro
-
-## License
-
-VeesoMarlinManager is available under the MIT license. See the LICENSE file for more info.
-
+* Install the ExpressPlay SDK.
+* Add the following line to your Podfile:
+        
+        pod "VeesoMarlinManager"
+    
+* If installing without CocoaPods, get the latest static library and header files [from the repository](https://github.com/veeso/ios-marlin-drm).
+* Instantiate a Marlin manager object and register it with the player:
+        
+        VeesoMarlinManager *marlinManager = [[VeesoMarlinManager alloc] init];
+        [[APSMediaPlayer sharedInstance] registerUnitManager:marlinManager];
+    
+* Set the `managerType` property of the `APSMediaUnit` object to `@"marlin"`.
+* Optionally, to have the player download and add a license to the local store, you can set the `kAPSMetadataDrmUrl` key in the `metadata` dictionary of an item to the string URL to the license file. To configure from JSON, set the `drm_encoding_url` metadata key.
