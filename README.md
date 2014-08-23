@@ -37,4 +37,8 @@ APSMediaPlayer provides support for [Marlin DRM](http://www.marlin-community.com
                 "metadata": {
                         "drm_encoding_url": "http://url.to/marlin-broadband-key"
                 }
+<<<<<<< HEAD
         }
+=======
+        }
+>>>>>>> f141b9bcc8ca7228678a655da9628a1cd76d06d5
