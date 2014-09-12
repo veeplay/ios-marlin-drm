@@ -27,7 +27,7 @@ APSMediaPlayer provides support for [Marlin DRM](http://www.marlin-community.com
         APSMediaUnit *unit = [[APSMediaUnit alloc] init];
         unit.url = [NSURL URLWithString:@"http://url.to/your-protected-media"];
         unit.managerType = kVeesoMarlinDRMEncoding;
-        unit.metadata = @{ kAPSMetadataDrmUrl: @"http://url.to/marlin-broadband-key" }
+        unit.metadata = [NSMutableDictionary dictionaryWithDictionary: @{ kAPSMetadataDrmUrl: @"http://url.to/marlin-broadband-key" }];
         
 * Configuring a unit from JSON:
 
