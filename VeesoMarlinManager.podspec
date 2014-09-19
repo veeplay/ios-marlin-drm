@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "VeesoMarlinManager"
-  s.version          = "0.1.1"
+  s.version          = "0.1.2"
   s.summary          = "Marlin DRM support for the Veeso Media Player"
   s.homepage         = "http://veeso.co"
   s.license          = 'Commercial'
