@@ -1,20 +1,20 @@
-## VeesoMarlinManager
+## VeeplayMarlinManager
 
-APSMediaPlayer provides support for [Marlin DRM](http://www.marlin-community.com/), using the SDKs provided by [ExpressPlay](http://expressplay.com). To install:
+Veeplay provides support for [Marlin DRM](http://www.marlin-community.com/), using the SDKs provided by [ExpressPlay](http://expressplay.com). To install:
 
 * Install the ExpressPlay SDK.
 * Add the following line to your Podfile:
         
-        pod "VeesoMarlinManager"
+        pod "VeeplayMarlinManager"
     
-* If installing without CocoaPods, get the latest static library and header files [from the repository](https://github.com/veeso/ios-marlin-drm).
-* Import the VeesoMarlinManager header file:
+* If installing without CocoaPods, get the latest static library and header files [from the repository](https://github.com/veeplay/ios-marlin-drm).
+* Import the VeeplayMarlinManager header file:
  
-        #import "VeesoMarlinManager.h"
+        #import "VeeplayMarlinManager.h"
 
 * Instantiate a Marlin manager object and register it with the player:
         
-        VeesoMarlinManager *marlinManager = [[VeesoMarlinManager alloc] init];
+        VeeplayMarlinManager *marlinManager = [[VeeplayMarlinManager alloc] init];
         [[APSMediaPlayer sharedInstance] registerUnitManager:marlinManager];
     
 * Set the `managerType` property of the `APSMediaUnit` object to `@"marlin"`.
@@ -26,7 +26,7 @@ APSMediaPlayer provides support for [Marlin DRM](http://www.marlin-community.com
 
         APSMediaUnit *unit = [[APSMediaUnit alloc] init];
         unit.url = [NSURL URLWithString:@"http://url.to/your-protected-media"];
-        unit.managerType = kVeesoMarlinDRMEncoding;
+        unit.managerType = kVeeplayMarlinDRMEncoding;
         unit.metadata = [NSMutableDictionary dictionaryWithDictionary: @{ kAPSMetadataDrmUrl: @"http://url.to/marlin-broadband-key" }];
         
 * Configuring a unit from JSON:

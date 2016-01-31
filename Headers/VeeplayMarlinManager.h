@@ -1,5 +1,5 @@
 //
-//  VeesoMarlinManager.h
+//  VeeplayMarlinManager.h
 //  APSVAST
 //
 //  Created by gabi on 20.08.2014.
@@ -12,7 +12,7 @@
 
 #define kAPSMetadataDrmUrl @"drm_encoding_url"
 
-extern NSString* const kVeesoMarlinDRMEncoding;
+extern NSString* const kVeeplayMarlinDRMEncoding;
 
-@interface VeesoMarlinManager : NSObject <APSUnitManagerProtocol>
+@interface VeeplayMarlinManager : NSObject <APSUnitManagerProtocol>
 @end
