@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <ExpressPlay/ExpressPlay.h>
 #import "APSUnitManagerProtocol.h"
 
 #define kAPSMetadataDrmUrl @"drm_encoding_url"

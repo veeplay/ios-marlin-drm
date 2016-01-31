@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.author           = { "Veeplay" => "gabi@veeplay.com" }
   s.source           = { :git => "https://github.com/veeplay/ios-marlin-drm.git", :tag => s.version.to_s }
 
-  s.platform     = :ios, '5.0'
+  s.platform     = :ios, '6.0'
   s.requires_arc = true
 
   s.source_files         = "Headers/*.h"
