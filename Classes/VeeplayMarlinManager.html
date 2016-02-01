@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>ManagerLoadState Constants Reference</title>
+		<title>VeeplayMarlinManager Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">ManagerLoadState Constants Reference</h1>
+				<h1 class="hideInXcode">VeeplayMarlinManager Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -25,6 +25,16 @@
 				<li id="jumpto_button" role="navigation">
 					<select id="jumpTo">
 	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
@@ -37,6 +47,16 @@
 		<nav id="tocContainer" class="isShowingTOC">
 			<ul id="toc" role="tree">
 				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -45,7 +65,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="ManagerLoadState Constants Reference" name="top"></a>
+				<a title="VeeplayMarlinManager Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -54,82 +74,58 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">ManagerLoadState Constants Reference</h1>
+						<h1 class="title title-header">VeeplayMarlinManager Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value">APSUnitManagerProtocol</td>
+</tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">VeeplayMarlinManager.m</td>
+	<td class="specification-value">VeeplayMarlinManager.h<br />VeeplayMarlinManager.m</td>
 </tr>
 						</tbody></table></div>
 					
                     
                     
 					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>The VeeplayMarlinManager handles playback for units with Marlin DRM encryption. To instantiate a Marlin manager object and register it with the player:</p>
+
+<pre><code>    VeeplayMarlinManager *marlinManager = [[VeeplayMarlinManager alloc] init];
+    [[APSMediaPlayer sharedInstance] registerUnitManager:marlinManager];
+</code></pre>
+
+<p>Then:</p>
+
+<ul>
+<li>Set the <code>managerType</code> property of the <code>APSMediaUnit</code> object to <code>@"marlin"</code>. If doing this programatically, you can also use the <code>kVeeplayMarlinDRMEncoding</code> constant.</li>
+<li>Optionally, to have the player download and add a broadband license to the local store, you can set the <code>kAPSMetadataDrmUrl</code> key in the <code>metadata</code> dictionary of an item to the string URL to the license file. To configure from JSON, set the <code>drm_encoding_url</code> metadata key.</li>
+</ul>
+
+					</div>
 					
 					
 					
-                    
-                    
-                    <h3 class="subsubtitle method-title">ManagerLoadState</h3>
-                    
-                    <div class="section">
-                        <!-- display enum values -->
-                        
-                        <h4 class="method-subtitle">Definition</h4>
-                        <code>typedef NS_ENUM(NSInteger, ManagerLoadState ) {<br/>
-                            
-                            &nbsp;&nbsp; <a href="">LoadStateUnloaded</a>,<br/>
-                            
-                            &nbsp;&nbsp; <a href="">LoadStateLoaded</a>,<br/>
-                            
-                            &nbsp;&nbsp; <a href="">LoadStateFailed</a>,<br/>
-                            
-                            };</code>
-                    
-                    </div>
-                    
-                    <div class="section section-methods">
-                        <h4 class="method-subtitle">Constants</h4>
-                        <dl class="termdef">
-                            
-                            <dt><a name="" title="LoadStateUnloaded"></a><code>LoadStateUnloaded</code></dt>
-<dd>
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">VeeplayMarlinManager.m</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="LoadStateLoaded"></a><code>LoadStateLoaded</code></dt>
-<dd>
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">VeeplayMarlinManager.m</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="LoadStateFailed"></a><code>LoadStateFailed</code></dt>
-<dd>
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">VeeplayMarlinManager.m</code>.
-	</p>
-	
-</dd>
-                            
-                        </dl>
-                    </div>
-                    
-                    
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
                     
                     
 				</div>
