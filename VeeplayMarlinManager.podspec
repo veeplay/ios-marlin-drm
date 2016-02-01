@@ -12,17 +12,20 @@ Pod::Spec.new do |s|
   s.version          = "0.1.4"
   s.summary          = "Marlin DRM support for the Veeplay Media Player"
   s.homepage         = "http://veeplay.com"
-  s.license          = 'Commercial'
+  s.license          = { :type => "Commercial", :text => "Contact office@veeplay.com" }
   s.author           = { "Veeplay" => "gabi@veeplay.com" }
   s.source           = { :git => "https://github.com/veeplay/ios-marlin-drm.git", :tag => s.version.to_s }
 
   s.platform     = :ios, '6.0'
   s.requires_arc = true
 
+  s.documentation_url = "http://veeplay.github.io/ios-marlin-drm/"
+
   s.source_files         = "Headers/*.h"
   s.public_header_files  = "Headers/*.h"
+  s.preserve_paths       = "libVeeplayMarlinManager.a"
   s.library              = "c++"
-  s.vendored_libraries   = "libVeeplayMarlinManager.a"
+  s.xcconfig             =  { "LIBRARY_SEARCH_PATHS" => '"$(PODS_ROOT)/VeeplayMarlinManager"' }
   
   s.dependency "Veeplay"
 end

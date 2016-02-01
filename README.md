@@ -17,7 +17,7 @@ Veeplay provides support for [Marlin DRM](http://www.marlin-community.com/), usi
         VeeplayMarlinManager *marlinManager = [[VeeplayMarlinManager alloc] init];
         [[APSMediaPlayer sharedInstance] registerUnitManager:marlinManager];
     
-* Set the `managerType` property of the `APSMediaUnit` object to `@"marlin"`.
+* Set the `managerType` property of the `APSMediaUnit` object to `@"marlin"`. If doing this programatically, you can also use the `kVeeplayMarlinDRMEncoding` constant.
 * Optionally, to have the player download and add a broadband license to the local store, you can set the `kAPSMetadataDrmUrl` key in the `metadata` dictionary of an item to the string URL to the license file. To configure from JSON, set the `drm_encoding_url` metadata key.
 
 ### Example unit configurations
